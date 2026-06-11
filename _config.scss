@@ -42,3 +42,12 @@ $secondary-color: #2d241c;
 
 }
 
+
+// აქ ამერია max-width ვიცი ოდნავ დიდი უნდა დამეწერა დეკსტოპისთვის მარა გვაინ მივხვდი
+@mixin desktop{
+    max-width: 1500px;
+    display: grid;
+    margin: 40px auto;
+    padding: 20px;
+}
+

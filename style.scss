@@ -194,11 +194,11 @@ header{
 // services
 
 .service{
-    display: grid;
+    @include config.desktop;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 90px 90px 90px 90px 90px;
-    max-width: 1500px;
-    margin: 40px auto;
+
+
     
     
 
@@ -256,9 +256,10 @@ header{
 // recent project
 
 .project{
-    max-width: 1500px;
-    display: grid;
-    margin: 40px auto;
+    @include config.desktop;
+    // max-width: 1500px;
+    // display: grid;
+    // margin: 40px auto;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 400px 400px 400px 40px;
 
@@ -301,6 +302,52 @@ header{
         color: black;
     }
 }
+
+
+// testimonials
+
+.testimonial{
+    @include config.desktop;
+    grid-template-columns:500px 500px 500px;
+    grid-template-rows: 200px 400px;
+    
+
+    .header5{
+        grid-column: 1 / 4;
+        border: 1px solid white;
+        background-color: config.$secondary-color;
+        font-size: 75px;
+        display: grid;
+        place-items: center;
+    }
+
+    .testimonials{
+        padding: 30px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        border: 1px solid white;
+        gap: 40px;
+    }
+
+    p{
+        font-size: 22px;
+        line-height: 28px;
+        width: 425.6px;
+    }
+
+    h3{
+        font-size: 33px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

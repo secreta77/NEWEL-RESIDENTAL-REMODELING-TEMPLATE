@@ -136,11 +136,12 @@ header {
 }
 
 .service {
+  max-width: 1500px;
   display: grid;
+  margin: 40px auto;
+  padding: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 150px 90px 90px 90px 90px 90px;
-  max-width: 1500px;
-  margin: 40px auto;
 }
 .service .services-video {
   grid-column: 2/3;
@@ -175,6 +176,7 @@ header {
   max-width: 1500px;
   display: grid;
   margin: 40px auto;
+  padding: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 150px 400px 400px 400px 40px;
 }
@@ -235,6 +237,39 @@ header {
 .view-btn a, .videos-btn a {
   text-decoration: none;
   color: black;
+}
+
+.testimonial {
+  max-width: 1500px;
+  display: grid;
+  margin: 40px auto;
+  padding: 20px;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 200px 400px;
+}
+.testimonial .header5 {
+  grid-column: 1/4;
+  border: 1px solid white;
+  background-color: #2d241c;
+  font-size: 75px;
+  display: grid;
+  place-items: center;
+}
+.testimonial .testimonials {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  border: 1px solid white;
+  gap: 40px;
+}
+.testimonial p {
+  font-size: 22px;
+  line-height: 28px;
+  width: 425.6px;
+}
+.testimonial h3 {
+  font-size: 33px;
 }
 
 @media screen and (max-width: 1500px) {
