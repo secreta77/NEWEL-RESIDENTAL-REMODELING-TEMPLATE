@@ -1,3 +1,12 @@
 $primary-color: white;
+$secondary-color: #2d241c;
+
+
+@mixin mobile-styles {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 600px;
+        padding: 40px 20px;
+}
 
 

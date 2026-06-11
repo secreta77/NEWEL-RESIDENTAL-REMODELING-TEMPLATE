@@ -86,13 +86,13 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 4fr 1fr 1.5fr;
-  max-width: 1200px;
+  max-width: 1500px;
   display: grid;
   margin: 0 auto;
   padding-top: 40px;
 }
 .about img {
-  width: 600px;
+  width: 750px;
 }
 .about .about__content {
   display: flex;
@@ -135,6 +135,84 @@ header {
   border: 1px solid white;
 }
 
+.service {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 90px 90px 90px 90px 90px;
+  max-width: 1500px;
+  margin: 40px auto;
+}
+.service .services-video {
+  grid-column: 2/3;
+  grid-row: 1/7;
+}
+.service .services-video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid white;
+}
+.service .services {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  padding-left: 40px;
+  border: 1px solid white;
+}
+.service .top-service {
+  font-size: 50px;
+  background-color: #2d241c;
+}
+.service .videos-btn {
+  background-color: white;
+  padding: 10px 50px;
+  display: flex;
+  margin-left: auto;
+  grid-column: 2/3;
+}
+.service .videos-btn a {
+  text-decoration: none;
+  color: rgb(109, 106, 106);
+  font-size: 17px;
+  width: 100px;
+}
+
+.project {
+  max-width: 1500px;
+  display: grid;
+  margin: 40px auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 400px 400px 400px;
+}
+.project img {
+  width: 100%;
+  height: 400px;
+  border: 2px solid white;
+}
+.project .top-head4 {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  border: 2px solid white;
+}
+.project .photo03 {
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 1500px) {
+  .about {
+    max-width: 1200px;
+  }
+  .about img {
+    width: 600px;
+  }
+  .service {
+    max-width: 1200px;
+  }
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 1000px;
@@ -158,6 +236,9 @@ header {
   .about .about__content p {
     font-size: 19px;
     width: 400px;
+  }
+  .service {
+    max-width: 1000px;
   }
 }
 @media (max-width: 992px) {
@@ -189,6 +270,16 @@ header {
   .benefit h3 {
     font-size: 20px;
   }
+  .service {
+    max-width: 700px;
+    grid-template-rows: 100px 70px 70px 70px 70px 70px;
+  }
+  .service .services {
+    font-size: 20px;
+  }
+  .service .top-service {
+    font-size: 25px;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -200,17 +291,17 @@ header {
   .call-btn {
     display: none;
   }
-  .burger-menu {
-    display: flex;
-    width: 20px;
-  }
   .img-newel {
     max-width: 180px;
     height: 30px;
   }
   .burger-menu {
     display: block;
+  }
+  .burger-menu-img {
     filter: invert(1);
+    width: 20px;
+    height: 30px;
   }
   nav {
     display: none;
@@ -225,6 +316,64 @@ header {
   .topping p {
     font-size: 20px;
   }
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 600px;
+    padding: 40px 20px;
+  }
+  .about .about_image,
+  .about .about__content,
+  .about .benefits-title,
+  .about .benefit {
+    grid-column: 1/-1;
+  }
+  .about h2 {
+    font-size: 40px;
+    padding: 30px;
+  }
+  .about h3 {
+    margin-right: auto;
+    padding-left: 30px;
+    padding: 30px;
+    text-align: start;
+    font-size: 30px;
+  }
+  .about .about_image img {
+    width: 100%;
+    height: auto;
+  }
+  .about .about__content p {
+    width: 100%;
+  }
+  .about .about__content {
+    gap: 10px;
+  }
+  .about .about__content h2 {
+    font-size: 40px;
+    padding-left: 2px;
+  }
+  .service {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 600px;
+    padding: 40px 20px;
+    grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .service .services-video {
+    width: 100%;
+    height: 280px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .service * {
+    grid-column: 1/-1 !important;
+  }
+  .service .videos-btn {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
 }
 @media screen and (max-width: 450px) {
   .topping {
@@ -238,5 +387,14 @@ header {
   }
   .topping .text1 {
     display: none;
+  }
+  .about {
+    max-width: 400px;
+  }
+  .about .about__content p {
+    font-size: 12px;
+  }
+  .service {
+    max-width: 400px;
   }
 }/*# sourceMappingURL=style.css.map */
