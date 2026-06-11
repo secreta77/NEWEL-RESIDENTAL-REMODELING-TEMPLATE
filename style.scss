@@ -111,11 +111,6 @@ header{
     color: config.$primary-color;
 
 
-   
-
-
-
-
 
 }
 
@@ -236,14 +231,14 @@ header{
         font-size: 50px;
         background-color: config.$secondary-color;
     }
-    .videos-btn{
-        background-color: config.$primary-color;
-        padding: 10px 50px;
-        display: flex;
-        margin-left: auto;
+    // .videos-btn {
+    //     background-color: config.$primary-color;
+    //     padding: 10px 50px;
+    //     display: flex;
+    //     margin-left: auto;
  
 
-        grid-column: 2 / 3;
+    //     grid-column: 2 / 3;
 
         a{
             text-decoration: none;
@@ -254,7 +249,7 @@ header{
         }
      
     }
-}
+
 
 
 
@@ -265,7 +260,7 @@ header{
     display: grid;
     margin: 40px auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 400px 400px 400px;
+    grid-template-rows: 150px 400px 400px 400px 40px;
 
 
     img{
@@ -281,31 +276,31 @@ header{
         align-items: center;
         font-size: 80px;
         border: 2px solid white;
+        background-color: config.$secondary-color;
+
+    
     }
 
     .photo03{
         grid-column: 1 / 3;
     }
+
+    .view-btn {
+        @include config.buttons; 
+     
+    }
+
+
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.view-btn,.videos-btn{
+    @include config.buttons;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
 
 
 
@@ -316,19 +311,26 @@ header{
 
 
 @media screen and (max-width:1500px) {
-    .about{
-        max-width: 1200px;
+    .about ,.service {
+        @include config.fifteen-thousand;
+   
 
 
     img{
-        width: 600px;
+        width: 575px;
     }
 
     }
 
-    .service{
-        max-width: 1200px;
+    .project{
+        @include config.fifteen-thousand;
+        
+
     }
+
+  
+
+ 
 
 
 
@@ -351,13 +353,17 @@ header{
 
     }
 
+    .about,.container,.service,.project{
+       @include config.twelve-thousand;
+    }
+
    .about{
     max-width: 1000px;
-    // gap: 20px;
+    
 
     .about_image{
         img{
-            width: 496px;
+            width: 475px;
         }
     }
 
@@ -378,6 +384,9 @@ header{
     }
 
 
+
+
+
      
    }
 
@@ -386,6 +395,13 @@ header{
         .service{
             max-width: 1000px;
         }
+
+
+
+        .project{
+        max-width: 1200px;
+
+    }
 
 
 
@@ -408,14 +424,17 @@ header{
     }
 
 
-
+        .about,.service,.project{
+            max-width: 700px;
+        }
        .about{
-    max-width: 700px;
+    
     
 
     .about_image{
         img{
-            width: 350px;
+            width: 326px;
+            height: 100%;
         }
     }
 
@@ -430,8 +449,8 @@ header{
         }
 
         p{
-            font-size: 15px;
-            width: 311px;
+            font-size: 12px;
+            width: 285px;
         }
 
        
@@ -462,7 +481,7 @@ header{
 
 
         .service{
-            max-width: 700px;
+            
             grid-template-rows: 100px 70px 70px 70px 70px 70px;
 
 
@@ -528,9 +547,14 @@ header{
         }
     } 
 
+    .about,.service,.project{
+         @include config.mobile-styles;
+
+    }
+
 
     .about{
-        @include config.mobile-styles;
+        
 
 
         .about_image, 
@@ -558,6 +582,8 @@ header{
         .about_image img {
             width: 100%; 
             height: auto;
+            object-fit: cover;  
+            display: block;
         }
 
         .about__content p {
@@ -585,7 +611,7 @@ header{
     }
 
     .service{
-        @include config.mobile-styles;
+        
         grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
         .services-video{
@@ -609,6 +635,45 @@ header{
 
     }
 
+    .top-head4{
+        h3{
+            font-size: 30px;
+            padding: 20px;
+        }
+    }
+
+    .project {
+        @include config.mobile-styles; 
+        grid-template-rows: auto; 
+
+
+    
+        .photo01, 
+        .photo02,
+         .photo03, 
+         .photo04,
+          .photo05,
+           .top-head4,
+           .view-btn {
+            grid-column: 1 / -1; 
+            width: 100%;
+        }
+
+ 
+
+     
+
+
+        img {
+            display: block;
+            width: 100%;
+            height: 350px;       
+            object-fit: cover;   
+        }
+    }
+
+
+
 
 
 
@@ -625,7 +690,7 @@ header{
 
 
     h1{
-        font-size: 60px;
+        font-size: 70px;
 
         
     }

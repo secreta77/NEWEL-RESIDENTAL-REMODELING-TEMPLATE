@@ -9,4 +9,36 @@ $secondary-color: #2d241c;
         padding: 40px 20px;
 }
 
+@mixin twelve-thousand{
+    max-width: 1000px;
+    padding: 20px 25px;
+}
+
+
+
+@mixin fifteen-thousand {
+    max-width: 1200px;
+    padding: 20px 25px;
+    width: 100%;
+}
+
+@mixin buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #ffffff; 
+    color: #2d241c;            
+    border: none;              
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none; 
+    grid-column: 2 / 3; 
+    width: max-content;
+    margin-left: auto;
+    width: 200px;   
+
+
+}
 
