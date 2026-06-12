@@ -3,6 +3,12 @@
 
 body{
     font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+}
+
+
+html {
+    overflow-x: hidden; 
 }
 .header-section {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(96, 96, 96, 0.4)), 
@@ -13,10 +19,17 @@ body{
     min-height: 85vh; 
     display: flex;
     flex-direction: column;
+
 }
 
 header{
     color: config.$primary-color;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;       
+    z-index: 1000;
+
 }
 .img-newel-container{
   display: inline-block;
@@ -322,12 +335,13 @@ header{
     }
 
     .testimonials{
-        padding: 30px;
+        padding: 50px 30px;
         display: flex;
-        gap: 30px;
         flex-direction: column;
         border: 1px solid white;
-        gap: 40px;
+        justify-content: space-between;
+        
+
     }
 
     p{
@@ -369,9 +383,38 @@ header{
 
     }
 
-    .project{
+    .project,.testimonial{
         @include config.fifteen-thousand;
+        padding: 30px;
         
+
+    }
+
+    .testimonial{
+        grid-template-columns: 380px 380px 380px;
+        grid-template-rows: 200px 300px;
+        
+
+
+        .testimonials{
+            padding: 40px 20px;
+        }
+
+            .header5{
+        font-size: 55px;
+
+    }
+            p{
+        font-size: 16px;
+        line-height: 21px;
+        width: 321px;
+    }
+
+    h3{
+        font-size: 23px;
+    }
+
+
 
     }
 
@@ -400,7 +443,7 @@ header{
 
     }
 
-    .about,.container,.service,.project{
+    .about,.container,.service,.project,.testimonial{
        @include config.twelve-thousand;
     }
 
@@ -446,7 +489,34 @@ header{
 
 
         .project{
-        max-width: 1200px;
+        max-width: 1000px;
+
+    }
+
+
+    .testimonial{
+
+        grid-template-columns: 310px 320px 320px;
+        grid-template-rows: 120px 250px;
+
+
+        .testimonials{
+            padding: 40px 20px;
+        }
+
+        .header5{
+        font-size: 46px;
+
+    }
+        p{
+        font-size: 14px;
+        line-height: 17px;
+        width: 265px;
+    }
+
+        h3{
+            font-size: 23px;
+        }
 
     }
 
@@ -471,7 +541,7 @@ header{
     }
 
 
-        .about,.service,.project{
+        .about,.service,.project,.testimonial{
             max-width: 700px;
         }
        .about{
@@ -546,6 +616,35 @@ header{
         }
 
 
+
+        .testimonial{
+                    grid-template-columns: 220px 220px 220px;
+                    grid-template-rows: 120px 250px;
+
+
+
+        .testimonials{
+            padding: 30px 10px;
+        }
+
+        .header5{
+        font-size: 36px;
+
+    }
+        p{
+        font-size: 12px;
+        line-height: 17px;
+        width: 210px;
+    }
+
+        h3{
+            font-size: 20px;
+        }
+
+
+        }
+
+
     
 }
 
@@ -594,7 +693,7 @@ header{
         }
     } 
 
-    .about,.service,.project{
+    .about,.service,.project,.testimonial{
          @include config.mobile-styles;
 
     }
@@ -607,7 +706,8 @@ header{
         .about_image, 
         .about__content, 
         .benefits-title, 
-        .benefit {
+        .benefit,
+        .testimonial {
             grid-column: 1 / -1; 
         }
 
@@ -721,6 +821,33 @@ header{
 
 
 
+    .testimonial{
+        grid-template-rows: auto;
+        padding: 40px 20px;
+
+        .header5{
+            grid-column: 1 / -1;
+            font-size: 35px;
+        }
+
+        .testimonials{
+            width: 100%;
+            min-height: 250px;
+            gap: 10px;
+
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 30px;
+            width: 100%;
+        }
+
+
+    }
+
+
+
 
 
 
@@ -737,7 +864,7 @@ header{
 
 
     h1{
-        font-size: 70px;
+        font-size: 60px;
 
         
     }
@@ -754,8 +881,16 @@ header{
 
 
 
+
+
+    
+
+
+
+
+
   
-}
+    }
 
 
     .about{
@@ -772,9 +907,39 @@ header{
     }
 
 
-    .service{
+    .service,.project{
         max-width: 400px;
     }
+
+
+
+
+
+
+    .testimonial{
+        max-width: 400x;
+        padding: 10px;
+
+        .header5{
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .testimonials{
+            padding: 20px;
+
+        }
+
+        p{
+            font-size: 14px;
+            width: 250px;
+
+        }
+    }
+
+
+
+
 
 
     
