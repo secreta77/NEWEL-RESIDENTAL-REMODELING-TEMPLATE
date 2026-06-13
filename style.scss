@@ -24,7 +24,7 @@ html {
 
 header{
     color: config.$primary-color;
-    position: fixed;   
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;       
@@ -244,14 +244,7 @@ header{
         font-size: 50px;
         background-color: config.$secondary-color;
     }
-    // .videos-btn {
-    //     background-color: config.$primary-color;
-    //     padding: 10px 50px;
-    //     display: flex;
-    //     margin-left: auto;
- 
 
-    //     grid-column: 2 / 3;
 
         a{
             text-decoration: none;
@@ -353,7 +346,324 @@ header{
     h3{
         font-size: 33px;
     }
+
 }
+
+
+
+// contact
+
+.contact {
+    
+    @include config.desktop(flex); 
+    width: 100%;
+    align-items: stretch; 
+    justify-content: space-between;
+ 
+    
+
+    
+
+
+
+
+    .right-side {
+        flex: 1;
+        border: 1px solid white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        padding: 40px 40px;
+
+        
+        
+        
+        
+        h2 {
+            font-size: 65px;
+            margin-bottom: 25px;
+            font-weight: 400;
+
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+    }
+
+
+    .left-side {
+        flex: 1;
+        background-color: config.$secondary-color;
+        border: 1px solid white;
+        display: flex;
+       
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 15px;
+            padding: 50px;
+            align-content: space-between; 
+            width: 100%; 
+            height: 100%;
+            
+
+           
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: calc(50% - 7.5px); 
+                box-sizing: border-box;
+                
+            }
+
+            .full-width {
+                width: 100%;
+                justify-content: space-between; 
+
+            }
+
+            label {
+                font-size: 16px;
+                
+              
+            }
+
+            input {
+                width: 100%; 
+                padding: 12px;
+                border-radius: 4px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 16px;
+                background-color: #fff;
+                box-sizing: border-box;
+                background-color: config.$secondary-color;
+
+   
+            }
+            
+    
+        }
+
+        .submit-btn2{
+            width: 100%;
+            height: 40px;
+        }
+    }
+}
+
+
+
+
+
+// footer
+
+.site-footer{
+    
+    background-color: #46372B;
+    border-top: 0.5px solid rgb(149, 143, 143);
+}
+
+.footer-container{
+   
+    @include config.desktop;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    row-gap: 40px;
+    color: white;
+    
+    
+
+ 
+}
+
+.footer-section{
+    
+   
+    
+        .logo{
+        img{
+        width: 367px;
+        height: 65px;
+        
+    }
+
+
+        }
+
+    .socials{
+        margin-top:30px;
+        font-size: 33px;
+      
+        
+    }
+
+    .social-icons{
+        width: 33px;
+        height: 33px;
+        filter: invert(1);
+        display: flex;
+        margin-top: 20px;
+        column-gap: 5px;
+
+        
+  
+    }
+
+
+
+}
+
+.contact-info{
+   
+    border-left: 1px solid white;
+    padding-left: 40px;
+        h2{
+            font-size: 33px;
+            
+            
+            
+        }
+
+        p{
+           
+            font-size: 21px;
+            
+        }
+
+        .address{
+           
+            margin-top: 40px;
+            
+        }
+
+        .email{
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+
+
+    }
+
+    .explore{
+        
+        border-left: 1px solid white;
+        padding-left: 40px;
+        h2{
+            font-size: 33px;
+           
+        }
+
+        ul{
+            margin-top: 40px;
+            
+            li{
+                color: white;
+                padding-bottom: 10px;
+                font-size: 21px;
+               
+
+
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+
+
+        }
+
+        
+    }
+
+
+
+        .bottom-links{
+            border: 1px solid white;
+            border-right: none;
+            padding: 35px;
+            
+            a{
+                color: white;
+                font-size: 21px;
+                text-decoration: none;
+                padding-right: 40px;
+                
+            }
+        }
+
+
+
+
+      .copyright{
+            grid-column: 3 / 4;
+            border: 1px solid white;
+            border-left: none;
+            padding: 35px;
+
+
+            P{
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    
+                }
+            }
+
+
+
+
+        }
+
+        .blank{
+            border: 1px solid white;
+            border-left: none;
+            grid-column: 2 / 3;
+            border-right: none;
+            
+        }
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
 
 
 
@@ -383,7 +693,7 @@ header{
 
     }
 
-    .project,.testimonial{
+    .project,.testimonial, .contact ,.footer-container{
         @include config.fifteen-thousand;
         padding: 30px;
         
@@ -418,6 +728,19 @@ header{
 
     }
 
+
+
+    .bottom-links{
+       
+        a{
+            font-size: 15px;
+
+        }
+    }
+
+
+
+
   
 
  
@@ -427,6 +750,8 @@ header{
 
     
 }
+
+
 
 
 
@@ -443,7 +768,7 @@ header{
 
     }
 
-    .about,.container,.service,.project,.testimonial{
+    .about,.container,.service,.project,.testimonial,.contact,.footer-container{
        @include config.twelve-thousand;
     }
 
@@ -522,6 +847,40 @@ header{
 
 
 
+    .footer-container{
+
+        .logo{
+                img{
+            width: 213px;
+            height: 38px;
+        }
+
+        }
+
+        .socials{
+            h3{
+                font-size: 25px;
+            }
+
+      
+        }
+    
+    }
+
+
+
+    .bottom-links{
+       
+        a{
+            font-size: 11px;
+    
+        }
+    }
+
+
+
+
+
 
 
 
@@ -541,7 +900,7 @@ header{
     }
 
 
-        .about,.service,.project,.testimonial{
+    .about,.service,.project,.testimonial,.contact,.footer-container{
             max-width: 700px;
         }
        .about{
@@ -572,6 +931,8 @@ header{
 
        
     }
+
+
 
 
 
@@ -645,6 +1006,69 @@ header{
         }
 
 
+
+
+        .contact{
+            .right-side{
+                h2{
+                    font-size: 20px;
+                }
+                P{
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+
+
+    .footer-container{
+
+        .logo{
+                img{
+            width: 180px;
+            height: 30px;
+        }
+
+        }
+
+        .socials{
+            h3{
+                font-size: 20px;
+            }
+
+      
+        }
+
+        .contact-info{
+            h2{
+                font-size: 25px;
+            }
+
+            p{
+                font-size: 17px;
+            }
+        }
+
+
+        .explore{
+            h2{
+                font-size: 22px;
+            }
+
+            ul{
+                li{
+                    font-size: 15px;
+                }
+            }
+        }
+    
+    }
+
+
+ 
+
+
     
 }
 
@@ -654,6 +1078,9 @@ header{
 
 
 @media (max-width: 768px) {
+
+
+
     .container {
         padding: 15px 20px;
         nav { display: none; }
@@ -693,7 +1120,7 @@ header{
         }
     } 
 
-    .about,.service,.project,.testimonial{
+    .about,.service,.project,.testimonial,.contact{
          @include config.mobile-styles;
 
     }
@@ -707,9 +1134,14 @@ header{
         .about__content, 
         .benefits-title, 
         .benefit,
-        .testimonial {
-            grid-column: 1 / -1; 
+        .testimonial
+        ,.footer-container{
+             grid-column: 1 / -1; 
+
         }
+        
+           
+        
 
         h2{
             font-size: 40px;
@@ -821,28 +1253,55 @@ header{
 
 
 
+
+
+
+
+
     .testimonial{
-        grid-template-rows: auto;
-        padding: 40px 20px;
+    grid-template-rows: auto;
+    padding: 40px 20px;
 
-        .header5{
-            grid-column: 1 / -1;
-            font-size: 35px;
-        }
+    .header5{
+        grid-column: 1 / -1;
+        font-size: 35px;
+    }
 
-        .testimonials{
-            width: 100%;
-            min-height: 250px;
-            gap: 10px;
-
-        }
+    .testimonials{
+        width: 100%;
+        min-height: 250px;
+        gap: 10px;
 
         p{
             font-size: 16px;
             line-height: 30px;
             width: 100%;
         }
+    }
+}
 
+
+
+
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+
+    .right-side{
+
+
+         h2{
+        font-size: 48px;
+
+    }
+
+        p{
+            font-size: 17px;
+            width: 387px;
+            
+        }
 
     }
 
@@ -852,9 +1311,86 @@ header{
 
 
 
+ 
+}
+
+
+
+
+
+@media screen and (max-width:790px) {
+
+    .footer-container {
+        display: flex ; 
+        flex-direction: column;   
+        gap: 35px;                
+        padding: 40px 20px;       
+
+
+        .contact-info, .explore {
+            border-left: none ;
+            padding-left: 0 ;
+            width: 100%;
+        }
+
+
+
+        .bottom-links {
+            width: 100%;              
+            max-width: 400px;       
+            
+            display: flex; 
+            flex-direction: column;   
+            gap: 15px;               
+            align-items: center;      
+            border: 1px solid white; 
+            padding: 15px ;
+
+            a {
+                font-size: 19px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .copyright{
+            border: 1px solid white;
+        }
+
+
+
+
+        .blank, .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+            
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
 
   
-} 
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:450px) {
@@ -907,9 +1443,11 @@ header{
     }
 
 
-    .service,.project{
+    .service,.project,.testimonial,.contact{
         max-width: 400px;
     }
+
+
 
 
 
@@ -940,10 +1478,45 @@ header{
 
 
 
+    .contact{
+        padding: 20px;
+
+
+        .right-side{
+            padding: 20px 20px;
+
+        h2{
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 12px;
+            width: 240px;
+            
+        }
+
+        }
+        
+
+
+
+
+    .left-side{
+        form{
+            padding: 30px;
+        }
+    }
+
+    }
+
+
+
+
+
 
 
     
 }
 
 
-
+}

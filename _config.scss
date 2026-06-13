@@ -44,10 +44,10 @@ $secondary-color: #2d241c;
 
 
 // აქ ამერია max-width ვიცი ოდნავ დიდი უნდა დამეწერა დეკსტოპისთვის მარა გვაინ მივხვდი
-@mixin desktop{
+@mixin desktop($display :grid){
     max-width: 1500px;
-    display: grid;
-    margin: 40px auto;
-    padding: 20px;
+    display: $display;
+    margin: 0 auto; 
+    padding: 40px 20px;
 }
 
